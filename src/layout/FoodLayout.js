@@ -1,7 +1,14 @@
+import Navbar from "@/components/Navbar";
+
+
 export default function FoodLayout({ children }) {
   return (
-    <div className="bg-slate-200 text-black min-h-screen">
-      <header className="text-6xl font-bold">FOOD WENAK</header>
+    <div className="layout"> 
+      <header className="header text-3xl font-bold">
+        FOOD
+      <Navbar/>
+      </header>
+      
       {children}
     </div>
   );

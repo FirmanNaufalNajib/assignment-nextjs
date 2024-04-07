@@ -1,33 +1,22 @@
-import { useEffect, useState } from "react";
+import FoodLayout from "@/layout/FoodLayout";
 import axios from "axios";
 
-export default function Home() {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
+export async function getServerSideProps(context) {
+  const resp = await axios.get(`https://api-bootcamp.do.dibimbing.id/api/v1/foods?page=${context.query.page}`, {
+    headers: { apiKey: "w05KkI9AWhKxzvPFtXotUva-" },
+  });
 
-  useEffect(() => {
-    const getFoods = async () => {
-      setLoading(true);
-      const resp = await axios.get("https://api-bootcamp.do.dibimbing.id/api/v1/foods", {
-        headers: { apiKey: "w05KkI9AWhKxzvPFtXotUva-" },
-      });
+  return { props: { foods: resp.data.data } };
+}
 
-      setData(resp.data.data);
-      setLoading(false);
-    };
-
-    getFoods();
-  }, []);
-
-  if (loading) return <div>Loading . . .</div>;
-
+export default function Home({ foods }) {
   return (
-    <div className="space-y-8">
-      {data.map((food) => (
-        <div>
-          <img src={food.imageUrl} className="w-64 aspect-video" />
-        </div>
-      ))}
-    </div>
+    <FoodLayout>
+      <div className="home-container">
+      <h1>SELAMAT DATANG</h1>
+      <img src="https://th.bing.com/th/id/OIP.H_W82aj3ubdYm38ZkQ2V1gAAAA?rs=1&pid=ImgDetMain"/>
+      <h1>UI DALAM PENGERJAAN</h1>
+      </div>
+    </FoodLayout>
   );
 }

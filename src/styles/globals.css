@@ -1,3 +1,190 @@
+/* Navbar */
+.navbar {
+  padding: 10px 20px;
+}
+
+.navbar-link {
+  color:#b68603;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.navbar-link:hover {
+  text-decoration: underline;
+}
+
+.navbar-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.navbar-button:hover {
+  background-color: #45a049;
+}
+
+
+/* layout */
+.layout {
+  font-family: Arial, sans-serif;  
+}
+.header {
+  color: #b68603;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+.container-food-list{
+  
+  display: flex;
+  flex-wrap: wrap; /* Ensures items wrap to next line if container width is not enough */
+  justify-content: center; /* Centers items along the main axis (horizontally) */
+  gap: 20px; /* Adds spacing between items */
+}
+
+
+/* FoodForm */
+
+.form-container {
+  max-width: 400px; /* Adjust as needed */
+  margin: auto; /* Center the form horizontally */
+  margin-top: 30px;
+  padding: 20px;
+  background-color:  #b68603; /* Example background color */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Example box shadow */
+}
+
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-container label {
+  font-weight: bold;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #6d3f02; /* Example button color */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Food Detail */
+.food-detail-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  background-color: #240602;
+  margin-top: 50px;
+}
+
+.food-detail-container img {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+.delete-button {
+  color: red;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bolder;
+  
+}
+
+.delete-button:hover {
+  background-color: #cc0000;
+  color: white;
+}
+
+/* home */
+
+.home-container {
+  display: grid;
+  place-items: center;
+}
+
+.home-container h1 {
+  font-size: 100px;
+  color: #240602;
+}
+
+
+
+/* Makanan */
+.food-list {
+  display: inline-block;
+  width: 370px; /* Adjust the width as needed */
+  height: 370px;
+  margin: 20px; /* Adjust the margin as needed */ /* Adjust the margin as needed */
+  vertical-align: top;
+  background-color:  #240602;; /* White background */
+  border: 1px solid #000; /* Black border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Adjust the padding as needed */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+  
+}
+
+.food-list img {
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for the image */
+}
+
+.food-list h4 {
+  margin-top: 10px; /* Adjust the margin as needed */
+  font-size: 18px; /* Adjust the font size as needed */
+  text-align: center;
+  color: #4CAF50;
+}
+
+.food-list p {
+  margin-top: 8px; /* Adjust the margin as needed */
+  font-size: 16px; /* Adjust the font size as needed */
+  color: #333; /* Black color for text */
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -18,5 +18,6 @@ export default function usePost() {
     setLoading(false);
   };
 
+
   return { post, loading };
 }
